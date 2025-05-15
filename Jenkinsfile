@@ -3,7 +3,7 @@ agent any
 stages {
 stage('Checkout') {
 steps {
-git credentialsId: '31fb5659-eb4b-40f4-a27d-34d984ebc575', url: ' https://github.com/Aarzoo-2401/8.2CDevSecOps.git'
+git credentialsId: '31fb5659-eb4b-40f4-a27d-34d984ebc575', url: ' https://github.com/Aarzoo-2401/8.2CDevSecOp.git'
 }
 }
 stage('Install Dependencies') {

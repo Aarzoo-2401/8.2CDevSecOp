@@ -12,10 +12,15 @@ bat 'npm install'
 }
 }
 stage('Run Tests') {
-steps {
-bat 'npm test || true' // Allows pipeline to continue despite test failures
+    steps {
+        script {
+            def testStatus = bat(script: 'npm test', returnStatus: true)
+            echo "Test exit code: ${testStatus}"
+            // You can add further logic based on testStatus if needed
+        }
+    }
 }
-}
+
 stage('Generate Coverage Report') {
 steps {
 // Ensure coverage report exists

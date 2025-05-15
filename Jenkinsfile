@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        SNYK_TOKEN = credentialsID: 'snyk-token'  // Use the ID you set in Jenkins
-    }
+    SNYK_TOKEN = credentials('snyk-token')
+}
     stages {
         stage('Checkout') {
             steps {

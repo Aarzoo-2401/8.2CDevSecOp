@@ -3,7 +3,7 @@ agent any
 stages {
 stage('Checkout') {
 steps {
-git branch: 'main', url: ' https://github.com/Aarzoo-2401/8.2CDevSecOps.git'
+git credentialsId: 'github-token', url: ' https://github.com/Aarzoo-2401/8.2CDevSecOps.git'
 }
 }
 stage('Install Dependencies') {
